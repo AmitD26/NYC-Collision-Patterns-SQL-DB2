@@ -1,4 +1,5 @@
 Please check assignment_description.txt for the assignment description.
+The data files have been uploaded to the repository. They are NYPD_Motor_Vehicle_Collisions2017.csv and zipcodepopulation.csv.
 
 3a.
 Finding the hour with the peak of collision:
