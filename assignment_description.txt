@@ -1,6 +1,7 @@
 Homework 1 (NYC Collision Patterns)
 In this homework, we will use two datasets:
-a) NYPD Motor Vehicle Collisions (collision)
+a) <a href="https://data.cityofnewyork.us/Public-Safety/NYPD-Motor-Vehicle-Collisions/h9gi-nx95">NYPD Motor Vehicle Collisions (collision) </a>
+
 We only use data from 2017, as the total size is too big. A downloaded copy of 2017 data can be downloaded here. 
 
 b) Population data for zip codes in New York State (census)
