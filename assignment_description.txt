@@ -1,0 +1,46 @@
+Homework 1 (NYC Collision Patterns)
+In this homework, we will use two datasets:
+a) NYPD Motor Vehicle Collisions (collision)
+We only use data from 2017, as the total size is too big. A downloaded copy of 2017 data can be downloaded here. 
+
+b) Population data for zip codes in New York State (census)
+The data can be downloaded here. (columns: rank, populaiton_density, zip, population)
+(Updated to comma separated format on 02/15. Please download again.)
+
+1a. Create a collison table with following information.
+cse532.collision (date, time, zip_code, latitude, longitude, contributing_factor_vehicle1, contributing_factor_vehicle2,  unique_key, vehicle_type_code_1, vehicle_type_code_2). Use unique_key is the primary key. Note that you have to define data types with size big enough to store the data. 
+Store the SQL in a file hw1createcollisiontable.sql.
+
+1b. Load data from the 2017 collision file by modifying the loading script with correct file paths, by running it from db2cmd:
+e.g.: db2 -tf  "C:\\Teaching\CSE532Spring19\homework\hw1\hw1collisionloadingscript.sql"
+You can also load data from Data Studio, by right click on the table name from Database Administration view. If so, please save the load script. You can find messages in the messagefile specified.
+
+2a. Create a zipcensustable with following information.
+cse532.zipcensus (rank, populaiton_density, zip, population), where zip is the primary key.
+Store the SQL in a file hw1createzipcensus.sql.
+
+2b. Load the data from the census file by creating a load script (hw1zipcensusloading.sql).
+You can remove the head line from the data file before loading. 
+
+
+3. Write following queries.
+3a. Find hourly and monthly counts of collision using CUBE based OLAP query (hw1q1.sql). Identify which hour in the day (based on all days in the year) has the peak of collision (put in readme.txt file). 
+
+3b. For zip codes with top 10 populations, find if any of them has collision count among top 10 counts too (hw1q2.sql).
+(Please DO NOT use FETCH .. ROWS ONLY statement. Use rank instead. )
+
+3c. For top 10 most dangerous locations (latitude, longitude) with highest collision counts, find their zip codes. Exclude all records with NULL value for latitude, longitude, or zip code (hw1q3.sql). 
+(You can use FETCH .. ROWS ONLY for top 10)
+Check if there are mistakes in zip codes (i.e., same location but different zip codes) for the top 10 most dangerous locations. You can verify at https://www.gps-coordinates.net/ to see which one is not correct - put result in readme.txt file. 
+
+Homework Submission
+Please zip your SQL scripts and results:
+hw1createcollisiontable.sql
+hw1collisionloadingscript.sql
+hw1createzipcensus.sql
+hw1zipcensusloading.sql
+hw1q1.sql (and result as a text file or screenshot)
+hw1q2.sql (and result as a text file or screenshot)
+hw1q3.sql (and result as a text file or screenshot)
+A readme.txt file explaining anything not included. 
+Please go to blackboard, and submit the zip file under homework 1.

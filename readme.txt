@@ -1,3 +1,5 @@
+Please check assignment_description.txt for the assignment description.
+
 3a.
 Finding the hour with the peak of collision:
 
